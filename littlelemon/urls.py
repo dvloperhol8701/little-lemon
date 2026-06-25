@@ -6,4 +6,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # This includes your specific restaurant app routing rules cleanly
     path('restaurant/', include('restaurant.urls')),
-]
+]   
