@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # <-- ADD THIS LINE HERE
-    'restaurant',  
+    'rest_framework',
+    
+    # ─── ADD THIS LINE ────────────────────────────────────────────────
+    'rest_framework.authtoken', 
+    
+    'djoser',
+    'restaurant',
 ]
 
 MIDDLEWARE = [
