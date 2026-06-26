@@ -15,4 +15,9 @@ urlpatterns = [
     
     # Step 4: Include the router-generated booking URLs
     path('restaurant/booking/', include(router.urls)),
+
+
+# ─── ADD THESE TWO LINES FOR DJOSER AUTH ──────────────────────────
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
