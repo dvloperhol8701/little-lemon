@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'restaurant',  # <-- Make sure this line is here
-]   
+    'rest_framework',  # <-- ADD THIS LINE HERE
+    'restaurant',  
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
