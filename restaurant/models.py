@@ -5,10 +5,10 @@ class Booking(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     no_of_guests = models.IntegerField()
-    BookingDate = models.DateTimeField()
+    booking_date = models.DateTimeField()  # <-- Normalized to lowercase snake_case
 
     def __str__(self):
-        return f"{self.name} - {self.BookingDate}"
+        return f"{self.name} - {self.booking_date}"
 
 
 # 2. Menu Table Model
@@ -18,6 +18,5 @@ class Menu(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)  
     inventory = models.IntegerField()
 
-    # Updated to match Step 2 of the exercise instructions exactly
     def __str__(self):
         return f'{self.title} : {str(self.price)}'
