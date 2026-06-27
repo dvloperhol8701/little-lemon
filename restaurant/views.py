@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from rest_framework import generics, viewsets, permissions
-from .models import Menu, Booking
-from .serializers import MenuSerializer, UserSerializer, BookingSerializer
+from rest_framework import generics, viewsets  # <-- Added viewsets here
+from .models import Menu, Booking              # <-- Added Booking model
+from .serializers import MenuSerializer, UserSerializer, BookingSerializer  # <-- Added BookingSerializer
 
 # 1. Standard HTML Template View for Homepage
 def index(request):
@@ -33,8 +33,12 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
 
 
-# 5. BookingViewSet for automated Table Booking CRUD operations (Locked by Djoser/DRF Auth)
+# NEW - Step 3: BookingViewSet for automated Table Booking CRUD operations
+from rest_framework import viewsets, permissions # <-- Make sure permissions is imported
+
+# ... (rest of your views stay the same)
+
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated] # <-- Adds the login lock!
