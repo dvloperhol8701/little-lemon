@@ -15,8 +15,9 @@ class Booking(models.Model):
 class Menu(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=10, decimal_places=2)  # <-- Fixed: max_digits instead of max_length
+    price = models.DecimalField(max_digits=10, decimal_places=2)  
     inventory = models.IntegerField()
 
+    # Updated to match Step 2 of the exercise instructions exactly
     def __str__(self):
-        return f"{self.title} : {str(self.price)}"
+        return f'{self.title} : {str(self.price)}'
