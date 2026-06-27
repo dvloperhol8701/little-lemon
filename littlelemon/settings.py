@@ -37,9 +37,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Frameworks & Utilities
     'rest_framework',
-    'restaurant',  # <-- MAKE SURE THIS LINE IS HERE
+    'rest_framework.authtoken',  # <-- Add this to enable DRF Token database access
+    'djoser',                    # <-- Add this to hook up your authentication layer
+    
+    # Your App
+    'restaurant',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- This tells Django to read the "Token xxxxx" header!
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
