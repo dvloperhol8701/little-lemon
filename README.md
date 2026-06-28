@@ -8,7 +8,7 @@
 ## Meta Back-End Developer Professional Certificate
 ### Back-End Developer Capstone (Coursera)
 
-**Developer:** Sunil Kumar Singh
+**Developer:** Saurav Suresh Suvarna
 
 ---
 
@@ -91,7 +91,7 @@ LITTLELEMON/
 # Installation
 
 ```bash
-git clone https://github.com/Sunilradhe/LittleLemon
+git clone https://github.com/dvloperhol8701/little-lemon
 cd LittleLemon
 python -m venv venv
 venv\Scripts\activate
@@ -183,11 +183,11 @@ The APIs were successfully tested using:
 
 # Author
 
-**Sunil Kumar Singh**
+**Saurav Suresh Suvarna**
 
 Meta Back-End Developer Professional Certificate (Coursera)
 
-GitHub: https://github.com/Sunilradhe
+GitHub: https://github.com/dvloperhol8701
 
 # License
 
