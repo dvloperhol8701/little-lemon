@@ -133,16 +133,14 @@ The APIs were successfully tested using:
 
 # Project Screenshots
 
-> Create an **images/** folder and upload your screenshots with these names.
-
 ## Unit Testing
-![Unit Testing](unit-test.png)
+![Unit Testing](images/unit-test.jpg)
 
 ## Menu API
 ![Menu API](get-menu.png)
 
 ## Create Menu
-![Create Menu](get-menu.png)
+![Create Menu](create-menu.png)
 
 ## Update Menu
 ![Update Menu](update-menu.png)
