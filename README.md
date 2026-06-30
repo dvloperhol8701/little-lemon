@@ -137,28 +137,28 @@ The APIs were successfully tested using:
 ![Unit Testing](images/unit-test.jpg)
 
 ## Menu API
-![Menu API](get-menu.png)
+![Menu API](images/get-menu.png)
 
 ## Create Menu
-![Create Menu](create-menu.png)
+![Create Menu](images/create-menu.png)
 
 ## Update Menu
-![Update Menu](update-menu.png)
+![Update Menu](images/update-menu.png)
 
 ## Delete Menu
-![Delete Menu](delete-menu.png)
+![Delete Menu](images/delete-menu.png)
 
 ## Token Generation
-![Token](token-generation.png)
+![Token](images/token-generation.png)
 
 ## Booking API
-![Booking](booking-api.png)
+![Booking](images/booking-api.png)
 
 ## cURL Output
-![cURL](curl-booking.png)
+![cURL](images/curl-booking.png)
 
 ## Project Structure
-![Project Structure](project-structure.png)
+![Project Structure](images/project-structure.png)
 
 # Learning Outcomes
 
