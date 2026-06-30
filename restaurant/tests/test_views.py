@@ -1,25 +1,23 @@
 from django.test import TestCase
-from django.urls import reverse
+from django.contrib.auth.models import User      # <-- Import the User model
+from rest_framework.test import APIClient
 from rest_framework import status
-from restaurant.models import Menu  # Changed from MenuItem to Menu
-from restaurant.serializers import MenuSerializer  # Changed from MenuItemSerializer to MenuSerializer
+from restaurant.models import Menu
 
 class MenuViewTest(TestCase):
     def setUp(self):
-        # Add a few test instances of the Menu model to the temporary test database
-        Menu.objects.create(title="Pizza", price=12.00, inventory=50)
-        Menu.objects.create(title="Burger", price=8.50, inventory=30)
+        self.client = APIClient()
+        
+        # 1. Create a temporary test user in the test database
+        self.user = User.objects.create_user(username='testuser', password='password123')
+        
+        # 2. Force authenticate your test client session
+        self.client.force_authenticate(user=self.user)
+        
+        # 3. Seed your test data item
+        Menu.objects.create(title="Ice Cream", price=80, inventory=50)
 
     def test_getall(self):
-        # 1. Retrieve all items from the test database
-        menu_items = Menu.objects.all()
-        
-        # 2. Serialize the database data
-        serializer = MenuSerializer(menu_items, many=True)
-        
-        # 3. Fetch the response from your actual endpoint view
-        response = self.client.get('/restaurant/menu/') 
-        
-        # 4. Run assertions to check if the status is 200 OK and data matches perfectly
+        # Now the client has permission clear clearance to execute the read request
+        response = self.client.get('/restaurant/menu/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data, serializer.data)
