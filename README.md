@@ -134,7 +134,7 @@ The APIs were successfully tested using:
 # Project Screenshots
 
 ## Unit Testing
-![Unit Testing](images/unit-test.jpg)
+![Unit Testing](images/unit-test.png)
 
 ## Menu API
 ![Menu API](images/get-menu.png)
