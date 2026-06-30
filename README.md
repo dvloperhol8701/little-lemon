@@ -155,7 +155,7 @@ The APIs were successfully tested using:
 ![Booking](images/booking-api.png)
 
 ## cURL Output
-![cURL](images/curl-booking.png)
+![cURL](images/curl-output.png)
 
 ## Project Structure
 ![Project Structure](images/project-structure.png)
